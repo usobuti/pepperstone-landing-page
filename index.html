@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+  <script>
+    const lang = navigator.language.toLowerCase();
+    let country = "sg"; // fallback
+
+    if (lang.includes("ko")) {{
+      country = "sg";
+    }} else if (lang.includes("zh")) {{
+      country = "hk";
+    }} else if (lang.includes("vi")) {{
+      country = "vn";
+    }} else if (lang.includes("th")) {{
+      country = "th";
+    }} else if (lang.includes("ms")) {{
+      country = "my";
+    }}
+
+    const redirectPath = `/${{country}}/search/brand`;
+    window.location.href = redirectPath + window.location.search;
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
